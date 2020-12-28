@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- ============ CSS ============ -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- ============ BOX ICONS ============ -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <title>Rome Calago | Portfolio</title>
+</head>
+<body>
+    <!-- ============ HEADER ============ -->
+    <header class="header-area">
+        <nav class="nav bd-grid">
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <div>
+                <a href="#" class="nav__logo">
+                    <!-- <figure>
+                        <img src="assets/images/romeLogo.png" alt="rome logo">
+                    </figure> -->
+                    Rome Calago
+                </a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <ul class="nav__list">
+                    <!-- <li class="nav__item"><a href="#hero" class="nav__link active">Home</a></li> -->
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="#works" class="nav__link">Works</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a download="" href="#contact" class="nav__link">Resume</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="hero">
+            <div class="hero__container bd-grid">
+                <div class="hero__data">
+                    <h1 class="hero__title">Hi! <span>I'm Rome</span></h1>
+                    <p class="hero__profession">Your <span>Next Door </span>Friendly <span>Web Developer</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ABOUT ============ -->
+        <section class="about section" id="about">
+            <div class="about__container bd-grid">
+                <h2 class="section-title">About Me</h2>
+                <div class="about__content">
+                    <div class="about__img">
+                        <figure><img src="assets/images/pp.jpg" alt="profile picture"></figure>
+                    </div>
+                    <p class="p-description">
+                        Hello! I’m Rome, a web developer based in Cebu, Philippines.
+                    </p>
+                    <p class="p-description">
+                        I have a strong passion for front end development and design. 
+                        I have experience developing and designing software for the web, 
+                        from simple landing pages to progressive web applications.
+                    </p>
+                    <p class="p-description">
+                        Here’s a few technological stack I work with:
+                    </p>
+                    <ul class="skill__set">
+                        <li>PHP</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>MySQL</li>
+                        <li>Wordpress</li>
+                        <li>Joomla</li>
+                        <li>Laravel</li>
+                    </ul>
+                </div> 
+            </div>
+        </section>
+
+        <!-- ============ EXPERIENCE ============ -->
+        <section class="experience section" id="experience">
+            <div class="experience__container bd-grid">
+                <h2 class="section-title">My Past Experience</h2>
+                <div class="experience__content">
+                    <p class="p-description">
+                        I am available for contract work, remote and full-time job.
+                    </p>
+                    <div class="tab">
+                        <button class="tablinks active" onclick="openTab(event, 'Upwork')">Upwork</button>
+                        <button class="tablinks" onclick="openTab(event, 'RMTrading')">RM Trading</button>
+                        <button class="tablinks" onclick="openTab(event, 'TruckGearDirect')">Truck Gear Direct</button>
+                        <button class="tablinks" onclick="openTab(event, 'CobitsX')">CobitsX</button>
+                        <button class="tablinks" onclick="openTab(event, 'O-Goods')">O-Goods</button>
+                        <button class="tablinks" onclick="openTab(event, 'Abayu')">Abayu</button>
+                    </div>
+                    <div id="Upwork" class="tabcontent">
+                        <h3>Remote Worker <a href="#" target="_blank" rel="noopener noreferrer"><span>@ Upwork</span></a></h3>
+                        <small class="yr__range">2010 - Present</small>
+                        <p>Developing Websites for clients.</p>
+                        <p>VA, Web-Dev, Ecommerce Specialist, Researcher and etc.</p>
+                    </div>
+                    <div id="RMTrading" class="tabcontent" style="display:none">
+                        <h3>Ecommerce Specialist <a href="#" target="_blank" rel="noopener noreferrer"><span>@ RM Trading</span></a></h3>
+                        <small class="yr__range">2011 - 2012</small>
+                        <p>Worked as an Ecommerce Specialist for their online store in various Ecommerce Platform. 
+                            3DCart, ebay, and amazon.
+                        </p>
+                        <p>Also handles SMM in Facebook and Instagram.
+                        </p>
+                    </div>
+                    <div id="TruckGearDirect" class="tabcontent" style="display:none">
+                        <h3>Ecommerce Specialist <a href="#" target="_blank" rel="noopener noreferrer"><span>@ Truck Gear Direct</span></a></h3>
+                        <small class="yr__range">2014 - 2019</small>
+                        <p>Worked as an Ecommerce Specialist and Product Manager for their online store in ebay.</p>
+                        <p>Maintaining their main online store.</p>
+                    </div>
+                    <div id="CobitsX" class="tabcontent" style="display:none">
+                        <h3>Web Developer <a href="#" target="_blank" rel="noopener noreferrer"><span>@ CobitsX</span></a></h3>
+                        <small class="yr__range">2019 - Present</small>
+                        <p>Web development and maintenace for their company's website</p> 
+                    </div>
+                    <div id="O-Goods" class="tabcontent" style="display:none">
+                        <h3>Web Developer <a href="#" target="_blank" rel="noopener noreferrer"><span>@ O-Goods</span></a></h3>
+                        <small class="yr__range">2018 - 2020</small>
+                        <p>Web development and maintenace for their company's website</p> 
+                    </div>
+                    <div id="Abayu" class="tabcontent" style="display:none">
+                        <h3>Web Developer <a href="#" target="_blank" rel="noopener noreferrer"><span>@ Abayu</span></a></h3>
+                        <small class="yr__range">2020 - Present</small>
+                        <p>Web development and maintenace for their company's website</p> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ============ WORKS ============ -->
+        <section class="works section" id="works">
+            <div class="works__container bd-grid">
+                <h2 class="section-title">Some of my Works</h2>
+                <div class="works__content">
+                    <div class="works__img">
+                        <figure><img src="assets/images/sampleWorks/ogoods.jpg" alt="ogoods sample work"></figure>
+                        <div class="works__data">
+                            <small>Featured Project</small>
+                            <h3>O-Goods</h3>
+                            <p class="p-description">
+                                An Online Marketplace for Organic Goods. This is a multivendor ecommerce project.
+                            </p>
+                            <ul class="works__techset">
+                                <li>PHP</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                                <li>Laravel</li>
+                            </ul>
+                            <div class="project__links">
+                                <a href="#" class="works__link"><i class='bx bxl-github'></i></a>
+                                <a href="#" class="works__link"><i class='bx bx-link-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__img">
+                        <figure><img src="assets/images/sampleWorks/ogoods.jpg" alt="ogoods sample work"></figure>
+                        <div class="works__data">
+                            <small>Featured Project</small>
+                            <h3>O-Goods</h3>
+                            <p class="p-description">
+                                An Online Marketplace for Organic Goods. This is a multivendor ecommerce project.
+                            </p>
+                            <ul class="works__techset">
+                                <li>PHP</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                                <li>Laravel</li>
+                            </ul>
+                            <div class="project__links">
+                                <a href="#" class="works__link"><i class='bx bxl-github'></i></a>
+                                <a href="#" class="works__link"><i class='bx bx-link-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works__img">
+                        <figure><img src="assets/images/sampleWorks/ogoods.jpg" alt="ogoods sample work"></figure>
+                        <div class="works__data">
+                            <small>Featured Project</small>
+                            <h3>O-Goods</h3>
+                            <p class="p-description">
+                                An Online Marketplace for Organic Goods. This is a multivendor ecommerce project.
+                            </p>
+                            <ul class="works__techset">
+                                <li>PHP</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JS</li>
+                                <li>Laravel</li>
+                            </ul>
+                            <div class="project__links">
+                                <a href="#" class="works__link"><i class='bx bxl-github'></i></a>
+                                <a href="#" class="works__link"><i class='bx bx-link-alt'></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section class="contact section" id="contact">
+            <div class="contact__container bd-grid">
+                <h2 class="section-title">Get In Touch</h2>
+                <form action="" class="contact__form">
+                    <p class="p-description">
+                        Have a sweet project in mind or just want to say hi? Feel free to send me a message!
+                    </p>
+                    <div class="contact__inputs">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="email" placeholder="Email" class="contact__input">
+                        <input type="text" placeholder="Subject" class="contact__input">
+
+                        <textarea name="" id="" cols="0" rows="10" placeholder="Message" class="contact__input"></textarea>
+                        
+                        <input type="submit" value="Send" class="button contact__button">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+ 
+
+
+    <!-- ============ MAIN JS ============ -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        function openTab(evt, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tabcontent.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(tabName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
