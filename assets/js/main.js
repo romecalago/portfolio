@@ -13,7 +13,7 @@ closeMenu.addEventListener('click', ()=>{
     navMenu.classList.remove('show')
 })
 
-/*===== REMOVE MENU =====*/
+/*===== ACTIVE AND REMOVE MENU =====*/
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction() {

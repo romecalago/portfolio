@@ -1,1 +1,35 @@
-/* No CSS *//*# sourceMappingURL=media.css.map */
+@media screen and (min-width: 450px) {
+  .about__img {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .about__img {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section-title {
+    margin: 0 var(--mb-5) var(--mb-3);
+  }
+  .section-title:after {
+    width: 200px;
+  }
+  .nav__menu {
+    width: var(--nav-width);
+  }
+  .bd-grid {
+    margin: 0 var(--mb-4);
+  }
+  .about__container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .about__img {
+    width: 250px;
+    margin-top: var(--mb-2);
+  }
+}
+/*# sourceMappingURL=media.css.map */
