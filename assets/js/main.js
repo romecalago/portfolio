@@ -18,26 +18,59 @@ const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction() {
     navMenu.classList.remove('show')
+    navLink.forEach(n => n.classList.remove('active'))
+    this.classList.add('active')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*===== SCROLL SECTIONS ACTIVE LINK =====*/
-const sections = document.getElementById('section[id]')
+// const sections = document.getElementById('section[id]')
+// const sections = document.querySelectorAll('section[id]')
 
-window.addEventListener('scroll', scrollActive)
+// window.addEventListener('scroll', scrollActive)
 
-function scrollActive() {
-    const scrollY = window.pageYOffset
+// function scrollActive() {
+//     const scrollY = window.pageYOffset
     
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop -50
-        sectionId = current.getAttribute('id')
+//     sections.forEach(current =>{
+//         const sectionHeight = current.offsetHeight
+//         const sectionTop = current.offsetTop -50
+//         sectionId = current.getAttribute('id')
 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
-        } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
-        }
-    })
+//         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+//             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
+//         } else {
+//             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
+//         }
+//     })
+// }
+
+
+
+/*===== HEADER SCROLL =====*/
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("header").style.top = "0";
+    } else {
+        document.getElementById("header").style.top = "-100%";
+    }
+    prevScrollpos = currentScrollPos;
 }
+
+
+/*===== OPENING TAB IN WORK SECTION =====*/
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tabcontent.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }

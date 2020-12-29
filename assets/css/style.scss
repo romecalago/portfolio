@@ -138,8 +138,11 @@ img {
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px 4px rgba(214, 214, 214, 0.1);
+    background: var(--second-color);
+    // box-shadow: 0 2px 4px rgba(214, 214, 214, 0.1);
+
+    display: block;
+    transition: top 0.3s;
 }
 /*===== NAV =====*/
 .nav {
@@ -147,6 +150,15 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.nav__logo {
+    display: flex;
+    align-items: center;
+}
+.nav__logo img{
+    width: 35px;
+    height: 30px;
+    margin: 0 var(--mb-1);
 }
 .nav__menu {
     position: fixed;

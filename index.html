@@ -19,7 +19,7 @@
 </head>
 <body>
     <!-- ============ HEADER ============ -->
-    <header class="header__area">
+    <header class="header__area" id="header">
         <nav class="nav bd-grid">
             <div class="nav__toggle" id="nav-toggle">
                 <i class='bx bx-menu'></i>
@@ -27,9 +27,9 @@
 
             <div>
                 <a href="#" class="nav__logo">
-                    <!-- <figure>
+                    <figure>
                         <img src="assets/images/romeLogo.png" alt="rome logo">
-                    </figure> -->
+                    </figure>
                     Rome Calago
                 </a>
             </div>
@@ -41,11 +41,11 @@
 
                 <ul class="nav__list">
                     <!-- <li class="nav__item"><a href="#hero" class="nav__link active">Home</a></li> -->
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link active">About</a></li>
                     <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
                     <li class="nav__item"><a href="#works" class="nav__link">Works</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    <li class="nav__item"><a download="" href="#contact" class="nav__link">Resume</a></li>
+                    <li class="nav__item"><a download="" href="CV_RomeCalago_CV.pdf" class="nav__link">Resume</a></li>
                 </ul>
             </div>
         </nav>
@@ -84,7 +84,7 @@
                     <ul class="skill__set">
                         <li>PHP</li>
                         <li>HTML</li>
-                        <li>CSS</li>
+                        <li>(S)CSS</li>
                         <li>Javascript</li>
                         <li>MySQL</li>
                         <li>Wordpress</li>
@@ -261,7 +261,8 @@
     <!-- ============ MAIN JS ============ -->
     <script src="assets/js/main.js"></script>
 
-    <script>
+    <!-- for opening tab in works section -->
+    <!-- <script>
         function openTab(evt, tabName) {
           var i, tabcontent, tablinks;
           tabcontent = document.getElementsByClassName("tabcontent");
@@ -275,6 +276,21 @@
           document.getElementById(tabName).style.display = "block";
           evt.currentTarget.className += " active";
         }
-    </script>
+    </script> -->
+
+    <!-- for header scrollup -->
+    <!-- <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("header").style.top = "0";
+        } else {
+            document.getElementById("header").style.top = "-100%";
+        }
+        prevScrollpos = currentScrollPos;
+        }
+    </script> -->
+    
 </body>
 </html>
