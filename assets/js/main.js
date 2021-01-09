@@ -13,7 +13,8 @@ closeMenu.addEventListener('click', ()=>{
     navMenu.classList.remove('show')
 })
 
-/*===== ACTIVE AND REMOVE MENU =====*/
+/*===== SHOW AND REMOVE ACTIVE MENU
+        REMOVE SIDE MENU ON MOBILE/TABLET VIEW =====*/
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction() {
@@ -52,9 +53,12 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-        document.getElementById("header").style.top = "0";
+        document.getElementById('header').style.top = '0';
+        // document.getElementById('nav-list').style.top = '0';
     } else {
-        document.getElementById("header").style.top = "-100%";
+        document.getElementById('header').style.top = '-100%';
+        // document.getElementById('nav-list').style.top = '-100%';
+       
     }
     prevScrollpos = currentScrollPos;
 }
@@ -63,14 +67,14 @@ window.onscroll = function() {
 /*===== OPENING TAB IN WORK SECTION =====*/
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
+    tabcontent = document.getElementsByClassName('tabcontent');
     for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+      tabcontent[i].style.display = 'none';
     }
-    tablinks = document.getElementsByClassName("tablinks");
+    tablinks = document.getElementsByClassName('tablinks');
     for (i = 0; i < tabcontent.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+      tablinks[i].className = tablinks[i].className.replace(' active', '');
     }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
+    document.getElementById(tabName).style.display = 'block';
+    evt.currentTarget.className += ' active';
   }
