@@ -197,9 +197,6 @@ img {
     font-size: 30px;
     cursor: pointer;
 }
-// .nav__list li {
-//     font-family: var(--font-fira);
-// }
 .nav__list li a:before{
     counter-increment: my-item-counter 1;
     content: "0" counter(my-item-counter) ".";
