@@ -48,7 +48,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
 
-/*===== HEADER SCROLL =====*/
+/*===== HEADER HIDE and SHOW WHEN SCROLLING =====*/
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
@@ -78,3 +78,16 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = 'block';
     evt.currentTarget.className += ' active';
   }
+
+  /*===== SIDE NAVIGATION BUTTONS =====*/
+  const allItems = document.querySelectorAll('.side__content ul li a');
+
+  allItems.forEach(item => {
+      item.addEventListener('click', function(e) {
+          //remove previous active classes
+          for (var i=0; i<allItems.length; i++) {
+              allItems[i].classList.remove('active');
+          }
+          this.classList.add('active');
+      });
+  })

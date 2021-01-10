@@ -54,13 +54,14 @@
         </nav>
     </header>
 
+    <!-- ============ MAIN ============ -->
     <main class="l-main">
         <!-- ============ HERO ============ -->
         <section class="hero" id="hero">
             <div class="hero__container bd-grid">
                 <div class="hero__data">
                     <h1 class="hero__title">Hi! <span>I'm Rome</span></h1>
-                    <p class="hero__profession">Your <span>Next Door </span>Friendly <span>Web Developer</span></p>
+                    <p class="hero__profession">Your <span>Next Door</span> Friendly <span>Web Developer</span></p>
                 </div>
             </div>
         </section>
@@ -250,6 +251,26 @@
             </div>
         </section>
     </main>
+
+    <!-- ============ SIDES ============ -->
+    <div class="side__email" orientation="left">
+        <div class="side__content">
+            <a href="mailto:romecalago@gmail.com">romecalago@gmail.com</a>
+        </div>
+    </div>
+
+    <div class="side__nav" orientation="right">
+        <div class="side__content">
+            <ul>
+                <li><a href="#" class="active"> &nbsp;</a></li>
+                <li><a href="#about"> &nbsp;</a></li>
+                <li><a href="#experience"> &nbsp;</a></li>
+                <li><a href="#works"> &nbsp;</a></li>
+                <li><a href="#contact"> &nbsp;</a></li>
+            </ul>
+        </div>
+    </div>
+
     <!-- ============ FOOTER ============ -->
     <footer class="footer__area">
         <div class="footer__container bd-grid">
@@ -268,36 +289,7 @@
     <!-- ============ MAIN JS ============ -->
     <script src="assets/js/main.js"></script>
 
-    <!-- for opening tab in works section -->
-    <!-- <script>
-        function openTab(evt, tabName) {
-          var i, tabcontent, tablinks;
-          tabcontent = document.getElementsByClassName("tabcontent");
-          for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-          }
-          tablinks = document.getElementsByClassName("tablinks");
-          for (i = 0; i < tabcontent.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-          }
-          document.getElementById(tabName).style.display = "block";
-          evt.currentTarget.className += " active";
-        }
-    </script> -->
 
-    <!-- for header scrollup -->
-    <!-- <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("header").style.top = "0";
-        } else {
-            document.getElementById("header").style.top = "-100%";
-        }
-        prevScrollpos = currentScrollPos;
-        }
-    </script> -->
     
 </body>
 </html>
