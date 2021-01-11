@@ -24,29 +24,6 @@ function linkAction() {
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*===== SCROLL SECTIONS ACTIVE LINK =====*/
-// const sections = document.getElementById('section[id]')
-// const sections = document.querySelectorAll('section[id]')
-
-// window.addEventListener('scroll', scrollActive)
-
-// function scrollActive() {
-//     const scrollY = window.pageYOffset
-    
-//     sections.forEach(current =>{
-//         const sectionHeight = current.offsetHeight
-//         const sectionTop = current.offsetTop -50
-//         sectionId = current.getAttribute('id')
-
-//         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-//             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active')
-//         } else {
-//             document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active')
-//         }
-//     })
-// }
-
-
 
 /*===== HEADER HIDE and SHOW WHEN SCROLLING =====*/
 var prevScrollpos = window.pageYOffset;
@@ -81,7 +58,7 @@ function openTab(evt, tabName) {
 
   /*===== SIDE NAVIGATION BUTTONS =====*/
   const allItems = document.querySelectorAll('.side__content ul li a');
-
+        
   allItems.forEach(item => {
       item.addEventListener('click', function(e) {
           //remove previous active classes
@@ -91,3 +68,35 @@ function openTab(evt, tabName) {
           this.classList.add('active');
       });
   })
+
+
+
+
+
+
+//Change navigation style on scroll
+window.addEventListener('scroll', event => { 
+    let nav = document.querySelector('.header__area'); 
+    
+    (window.scrollY >= 44) ? nav.classList.add('scroll') : nav.classList.remove('scroll');
+});
+
+//Active navigation on scroll
+window.addEventListener('scroll', event => {
+  let navigationLinks = document.querySelectorAll('nav ul li a');
+  let fromTop = window.scrollY;
+ 
+  navigationLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+   
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+});
+

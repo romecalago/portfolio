@@ -43,6 +43,7 @@
         //  margin: 0;
         width: calc(100% - 73px);
     }
+    /*== Menu Nav ==*/
     .nav__toggle, .nav__close {
         display: none;
     }
@@ -72,6 +73,8 @@
     .nav__logo {
         margin: 0;
     }
+    /*== Hero ==*/
+    /*== About ==*/
     .about__container {
         column-gap: 62px;
         grid-template-columns: repeat(2,1fr);
@@ -90,7 +93,31 @@
             height: 242px;
         }
     }
-    
+    /*== Experience ==*/
+    .tab__contents {
+        display: flex;
+        flex-wrap: wrap;
+        .tab {
+            display: grid;
+            // width: 30%;
+            button {
+                border-bottom: none;
+                border-left: 2px solid var(--slate);
+                text-align: left;
+                font-size: var(--fz-md);
+                &.active {
+                    border-bottom: none;
+                    border-left: 2px solid var(--first-color);
+                }
+            }
+        }
+        .tabcontent {
+            width: 60%;
+            margin-left: 34px;
+        }
+    }
+    /*== Works ==*/
+    /*== Contact ==*/
 
     
 }
@@ -101,6 +128,13 @@
     }
     .hero__container {
         padding: 0 73px;
+    }
+    
+    /*== Experience ==*/
+    .experience {
+        
+            padding-left: 20%;
+        
     }
     
 }

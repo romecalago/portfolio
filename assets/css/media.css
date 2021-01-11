@@ -41,6 +41,7 @@
   .bd-grid {
     width: calc(100% - 73px);
   }
+  /*== Menu Nav ==*/
   .nav__toggle, .nav__close {
     display: none;
   }
@@ -70,6 +71,8 @@
   .nav__logo {
     margin: 0;
   }
+  /*== Hero ==*/
+  /*== About ==*/
   .about__container {
     -webkit-column-gap: 62px;
             column-gap: 62px;
@@ -86,6 +89,34 @@
   .about__img:after {
     height: 242px;
   }
+  /*== Experience ==*/
+  .tab__contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .tab__contents .tab {
+    display: -ms-grid;
+    display: grid;
+  }
+  .tab__contents .tab button {
+    border-bottom: none;
+    border-left: 2px solid var(--slate);
+    text-align: left;
+    font-size: var(--fz-md);
+  }
+  .tab__contents .tab button.active {
+    border-bottom: none;
+    border-left: 2px solid var(--first-color);
+  }
+  .tab__contents .tabcontent {
+    width: 60%;
+    margin-left: 34px;
+  }
+  /*== Works ==*/
+  /*== Contact ==*/
 }
 
 @media screen and (min-width: 1024px) {
@@ -94,6 +125,10 @@
   }
   .hero__container {
     padding: 0 73px;
+  }
+  /*== Experience ==*/
+  .experience {
+    padding-left: 20%;
   }
 }
 
