@@ -7,7 +7,7 @@
         $message = $_POST['message'];
 
         // $mailTO = "romecalago@gmail.com";
-        $mailTO = "fovajox829@izzum.com";
+        $mailTO = "dark_raven047@yahoo.com.ph";
         $headers = "From: " . $emailFrom;
         $txt = "You have an email from " . $name . "\n\n" . $message;
 
