@@ -397,6 +397,10 @@ img {
   row-gap: 25px;
 }
 
+.experience__content .p-description {
+  margin: 0 0 var(--mb-3);
+}
+
 /* Style the tab */
 .tab {
   display: -webkit-box;
@@ -502,10 +506,20 @@ img {
   row-gap: 25px;
 }
 
+.works__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .works__img {
   position: relative;
-  width: 80%;
-  margin: 0 auto var(--mb-5);
+  width: 250px;
+  margin: var(--mb-5) auto;
 }
 
 .works__img img {

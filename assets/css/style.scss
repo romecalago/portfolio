@@ -341,7 +341,11 @@ img {
 .experience__container {
     row-gap: 25px;
 }
-
+.experience__content {
+    .p-description {
+        margin: 0 0 var(--mb-3);
+    }
+}
   /* Style the tab */
 .tab {
     display: flex;
@@ -427,11 +431,17 @@ img {
     row-gap: 25px;
     // justify-items: center;
 }
+.works__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 .works__img {
     position: relative;
-    width: 80%;
+    width: 250px;
+    // width: 80%;
     // margin: 0 0 var(--mb-3);
-    margin: 0 auto var(--mb-5);
+    margin: var(--mb-5) auto;
 }
 .works__img img {
     border-radius: 50%;
