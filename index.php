@@ -1,3 +1,38 @@
+<?php
+$result = '';
+if(isset($_POST['submit'])) {
+    require 'PHPMailer/PHPMailerAutoload.php';
+    // require 'PHPMailer/class.phpmailer.php';
+    // require 'PHPMailer/class.smtp.php';
+    $mail = new PHPMailer();
+    $mail->isSMTP();
+    $mail ->Host = 'smtp.gmail.com';
+    $mail ->Port = 587;
+    $mail ->SMTPAuth=true;
+    $mail ->SMTPSecure='tls';
+    $mail ->Username='cobitX19@gmail.com';
+    $mail ->Password='';
+    $mail ->setFrom($_POST['email'],$_POST['name']);
+    $mail ->addAddress('cobitX19@gmail.com');
+    $mail ->addReplyTo($_POST['email'],$_POST['name']);
+    $mail ->isHTML(true);
+    $mail ->Subject='Contact from my Portfolio: ' .$_POST['subject'];
+    $mail ->Body='<h3>Name: '.$_POST['name'].'<br>Email: '.$_POST['email'].
+    '<br>Message: '.$_POST['message'].'</h3>';
+
+    if(!$mail->send()) {
+        $result = "Something went wrong. Please try again." . $mail->ErrorInfo;
+    } else {
+        $result = "Thanks \t " . $_POST['name'] . "for connecting with me. I'll get back to you soon!";
+    }
+
+
+
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -261,8 +296,14 @@
 
             <div class="contact__container bd-grid">
                 <!-- <form action="index.html" class="contact__form" method="post" id="emailForm"> -->
+<<<<<<< HEAD:index.html
                 <form class="contact__form"id="emailForm">
                     <h4 class="sent__notification"></h4>
+=======
+                <h4 class="sent__notification"><?=$result;?></h4>
+                <form action="" method="post" class="contact__form" id="emailForm">
+                    
+>>>>>>> 7f73b4dbf41188a51375907188c6d22fa42f1f71:index.php
                     <p class="p-description">
                         Have a sweet project in mind or just want to say hi? Feel free to send me a message!
                     </p>
@@ -271,10 +312,10 @@
                         <input type="email" name="email" id="email" placeholder="Email" class="contact__input">
                         <input type="text" name="subject" id="subject" placeholder="Subject" class="contact__input">
 
-                        <textarea name="message" id="body" cols="0" rows="10" placeholder="Message" class="contact__input"></textarea>
+                        <textarea name="message" id="message" cols="0" rows="10" placeholder="Message" class="contact__input"></textarea>
                         
-                        <!-- <input type="submit" name="submit" value="Send" class="button contact__button" onclick="sendEmail()"> -->
-                        <button type="button" onclick="sendEmail()" value="Send an EMail">Submit</button>
+                        <input type="submit" name="submit" value="Send" class="button contact__button" onclick="sendEmail()">
+                        <!-- <button type="button" onclick="sendEmail()" value="Send an EMail">Submit</button> -->
                     </div>
                 </form>
             </div>
