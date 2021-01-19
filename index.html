@@ -266,17 +266,17 @@
                 <form class="contact__form"id="emailForm">
                 <h4 class="sent__notification"></h4>
                 <!-- <h4 class="sent__notification"><?=$result;?></h4> -->
-                <form action="" method="post" class="contact__form" id="emailForm">
+                <form action="https://formspree.io/f/meqpnekg" method="POST" enctype="multipart/form-data" class="contact__form" id="emailForm">
 
                     <p class="p-description">
                         Have a sweet project in mind or just want to say hi? Feel free to send me a message!
                     </p>
                     <div class="contact__inputs">
-                        <input type="text" name="name" id="name" placeholder="Name" class="contact__input">
-                        <input type="email" name="email" id="email" placeholder="Email" class="contact__input">
-                        <input type="text" name="subject" id="subject" placeholder="Subject" class="contact__input">
+                        <input type="text" name="name" id="name" placeholder="Name" class="contact__input" required>
+                        <input type="email" name="email" id="email" placeholder="Email" class="contact__input" required>
+                        <input type="text" name="subject" id="subject" placeholder="Subject" class="contact__input" required>
 
-                        <textarea name="message" id="message" cols="0" rows="10" placeholder="Message" class="contact__input"></textarea>
+                        <textarea name="message" id="message" cols="0" rows="10" placeholder="Message" class="contact__input" required></textarea>
                         
                         <input type="submit" name="submit" value="Send" class="button contact__button" onclick="sendEmail()">
                         <!-- <button type="button" onclick="sendEmail()" value="Send an EMail">Submit</button> -->
@@ -324,41 +324,7 @@
     <script src="assets/js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-    <!-- <script type="text/javascript">
-        function sendEmail() {
-            var name = $("#name");
-            var email = $("#email");
-            var subject = $("#subject");
-            var body = $("#body");
-
-            if(isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
-                $.ajax({
-                    url: 'contactForm.php',
-                    method: 'POST',
-                    dataType: 'json',
-                    data: {
-                        name: name.val(),
-                        email: email.val(),
-                        subject: subject.val(),
-                        body: body.val()
-                    }, success: function(response) {
-                        $('#emailForm')[0].reset();
-                        $('.sent__notification').text("Message sent successfully.");
-                    }
-                });
-            }
-        }
-        function isNotEmpty(caller) {
-            if(caller.val() == "") {
-                caller.css('border', '1px solid red');
-                return false;
-            } else {
-                caller.css('border', '');
-                return true;
-            }
-        }
-    </script> -->
-
+ 
 
     
 </body>
